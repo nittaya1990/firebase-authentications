@@ -13,7 +13,25 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
 
-export { auth, provider };
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+const facebookProvider = new firebase.auth.FacebookAuthProvider();
+const githubProvider = new firebase.auth.GithubAuthProvider();
+const twitterProvider = new firebase.auth.TwitterAuthProvider();
+const microsoftProvider = new firebase.auth.OAuthProvider("microsoft.com");
+const appleProvider = new firebase.auth.OAuthProvider("apple.com");
+const yahooProvider = new firebase.auth.OAuthProvider("yahoo.com");
+
+export {
+  auth,
+  googleProvider,
+  facebookProvider,
+  githubProvider,
+  twitterProvider,
+  yahooProvider,
+  microsoftProvider,
+  appleProvider,
+  firebaseApp,
+};
+
 export default db;
